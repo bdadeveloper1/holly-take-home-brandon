@@ -1,0 +1,92 @@
+[
+  {
+    "id": "san_bernardino|01297",
+    "titleTokens": [
+      "assistant",
+      "chief",
+      "probation",
+      "officer"
+    ],
+    "jurisdiction": "san_bernardino",
+    "jurisdictionDisplay": "San Bernardino County",
+    "hasSalary": true
+  },
+  {
+    "id": "ventura|09111",
+    "titleTokens": [
+      "apcd",
+      "public",
+      "information",
+      "specialist"
+    ],
+    "jurisdiction": "ventura",
+    "jurisdictionDisplay": "Ventura County",
+    "hasSalary": true
+  },
+  {
+    "id": "san_bernardino|10019",
+    "titleTokens": [
+      "assistant",
+      "director",
+      "of",
+      "human",
+      "resources"
+    ],
+    "jurisdiction": "san_bernardino",
+    "jurisdictionDisplay": "San Bernardino County",
+    "hasSalary": true
+  },
+  {
+    "id": "san_bernardino|01410",
+    "titleTokens": [
+      "assistant",
+      "district",
+      "attorney"
+    ],
+    "jurisdiction": "san_bernardino",
+    "jurisdictionDisplay": "San Bernardino County",
+    "hasSalary": true
+  },
+  {
+    "id": "ventura|02181",
+    "titleTokens": [
+      "assistant",
+      "chief",
+      "probation",
+      "officer"
+    ],
+    "jurisdiction": "ventura",
+    "jurisdictionDisplay": "Ventura County",
+    "hasSalary": true
+  },
+  {
+    "id": "ventura|00080",
+    "titleTokens": [
+      "appraiser",
+      "trainee"
+    ],
+    "jurisdiction": "ventura",
+    "jurisdictionDisplay": "Ventura County",
+    "hasSalary": false
+  },
+  {
+    "id": "san_diego|03697",
+    "titleTokens": [
+      "associate",
+      "meteorologist"
+    ],
+    "jurisdiction": "san_diego",
+    "jurisdictionDisplay": "San Diego County",
+    "hasSalary": true
+  },
+  {
+    "id": "san_diego|00265",
+    "titleTokens": [
+      "assistant",
+      "sheriff"
+    ],
+    "jurisdiction": "san_diego",
+    "jurisdictionDisplay": "San Diego County",
+    "hasSalary": false
+  }
+]

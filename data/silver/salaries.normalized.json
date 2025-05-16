@@ -1,0 +1,166 @@
+{
+  "san_bernardino|01297": [
+    {
+      "grade": 1,
+      "amount": 70.38,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 101,
+      "cadence": "hourly",
+      "currency": "USD"
+    }
+  ],
+  "ventura|09111": [
+    {
+      "grade": 1,
+      "amount": 3119.39,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 4375.47,
+      "cadence": "monthly",
+      "currency": "USD"
+    }
+  ],
+  "san_bernardino|10019": [
+    {
+      "grade": 1,
+      "amount": 73.87,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 106.01,
+      "cadence": "hourly",
+      "currency": "USD"
+    }
+  ],
+  "san_bernardino|01410": [
+    {
+      "grade": 1,
+      "amount": 96.77,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 138,
+      "cadence": "hourly",
+      "currency": "USD"
+    }
+  ],
+  "ventura|02181": [
+    {
+      "grade": 1,
+      "amount": 6164.05,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 8630.52,
+      "cadence": "monthly",
+      "currency": "USD"
+    }
+  ],
+  "san_diego|03697": [
+    {
+      "grade": 1,
+      "amount": 43.38,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 45.55,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 3,
+      "amount": 47.83,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 4,
+      "amount": 50.22,
+      "cadence": "hourly",
+      "currency": "USD"
+    },
+    {
+      "grade": 5,
+      "amount": 53.33,
+      "cadence": "hourly",
+      "currency": "USD"
+    }
+  ],
+  "kern|00265": [
+    {
+      "grade": 1,
+      "amount": 4966.18,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 2,
+      "amount": 5065.5,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 3,
+      "amount": 5166.81,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 4,
+      "amount": 5270.15,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 5,
+      "amount": 5375.55,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 6,
+      "amount": 5483.06,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 7,
+      "amount": 5592.73,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 8,
+      "amount": 5704.58,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 9,
+      "amount": 5818.67,
+      "cadence": "monthly",
+      "currency": "USD"
+    },
+    {
+      "grade": 10,
+      "amount": 5935.04,
+      "cadence": "monthly",
+      "currency": "USD"
+    }
+  ]
+}
