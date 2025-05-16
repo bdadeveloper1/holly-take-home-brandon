@@ -94,10 +94,9 @@ The project implements a medallion data architecture pattern with three layers:
 - Bottom-fixed input bar for ergonomic typing 
 
 ### Color Scheme and Visual Design
-- Professional blue/green color scheme replacing the initial pink design
+- Blue/green color scheme 
 - User messages in blue (right-aligned) and AI responses in green (left-aligned)
 - Dark mode implementation with smooth transitions between light/dark themes
-- System preference detection for automatic dark/light mode selection
 - Subtle animations for message appearance and loading states
 
 ### User Experience Enhancements
