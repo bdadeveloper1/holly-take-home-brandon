@@ -156,6 +156,9 @@ The project supports two LLM providers:
    ```
    OPENAI_API_KEY=your_openai_api_key_here
    ```
+You can get an API key here: https://platform.openai.com/account/api-keys
+
+
 2. The system uses the gpt-3.5-turbo model by default (configured in `lib/llmPromptEngine.ts`)
 
 ### Hugging Face Integration (Alternative)
@@ -164,6 +167,7 @@ The project supports two LLM providers:
    HUGGINGFACE_API_KEY=your_huggingface_api_key_here
    ```
 2. In `lib/llm.ts`, uncomment the Hugging Face implementation and comment out the OpenAI implementation
+You can get a Hugging Face API key here: https://huggingface.co/settings/tokens
 
 ## Challenges and Solutions
 
@@ -217,7 +221,7 @@ Given more time, I would enhance the project with:
 
 ## Conclusion
 
-In this take-home I ended up building a slick Next.js chat interface wired to a tiny “medallion” JSON pipeline that I wrote in TypeScript. I spent most of my time normalizing messy job descriptions and salary data into a deterministic Gold file, then wrote a lightweight parser + fuzzy matching search so that I only ever pass the single matching job into the LLM. Along the way I learned how powerful a simple Bronze→Silver→Gold approach can be for both reproducibility and performance, and why stripping commas before parseFloat matters!
+In this take-home I built a nice Next.js chat interface wired to a tiny “medallion” JSON pipeline that I wrote in TypeScript. I spent most of my time normalizing messy job descriptions and salary data into a deterministic Gold file, then wrote a lightweight parser + fuzzy matching search so that I only ever pass the single matching job into the LLM. Along the way I learned how powerful a simple Bronze→Silver→Gold approach can be for both reproducibility and performance, and why stripping commas before parseFloat matters!
 
 The biggest challenges were wrangling free-form text fields—splitting out KSAs and duties—and handling inconsistent salary formats in JSON, all while staying inside a 2–3 hour window. I got really into this so I definitely went over in time.  I also had to balance prompt size (to control token costs) with giving the model enough context to answer accurately. 
 
