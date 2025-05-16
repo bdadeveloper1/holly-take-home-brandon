@@ -14,29 +14,64 @@ The project took approximately 4 hours to complete, going slightly over the sugg
 
 ## Data Pipeline Architecture
 
-The project implements a medallion data architecture pattern with three layers:
+We follow a **Medallion** pattern to keep data transformations transparent and reproducible. Contains three layer pattern approach.
 
-### Bronze Layer
-- Raw data from source JSON files (job-descriptions.json and salaries.json)
-- Contains unprocessed, original format data
+### Bronze Layer (takes from the original data provided)
+- **Source:**  
+  `data/bronze/job-descriptions.raw.json`  
+  `data/bronze/salaries.raw.json`  
+- **Contents:**  
+  Raw, unmodified JSON as provided by HR  
+- **Purpose:**  
+  Immutable audit trail of original inputs  
 
 ### Silver Layer
-- Normalized data with consistent schema
-- Created through transformation scripts
+- **Source:**  
+  `scripts/build-gold.ts`  
+- **Process:**  
+  1. Normalize fields (snake_case keys, trim/parse numbers, unify formats)  
+  2. Extract salary grades into `{ grade, amount, cadence, currency }` arrays  
+- **Output:**  
+  - `data/silver/job_descriptions.normalized.json`  
+  - `data/silver/salaries.normalized.json`  
+- **Purpose:**  
+  Cleaned, type-safe intermediate files  
 
 ### Gold Layer
-- Enriched, query-optimized data
-- Joined job descriptions with salary information
-- Used for serving the application
+- **Source:**  
+  Join of the Silver outputs by job code & jurisdiction  
+- **Script:**  
+  `scripts/database_normalization_script.ts`  
+- **Output:**  
+  - `data/gold/jobs_with_salary.json`  
+  - `data/gold/search_index.json`  
+- **Purpose:**  
+  Deterministic, query-optimized payloads that can be `import`ed directly at runtime  
+
+---
 
 ## Core Components
 
-### Data Processing (`scripts/database_normalization_script.ts`)
-- Transforms raw data into normalized, queryable format
-- Joins job descriptions with salary information
-- Creates the gold layer data for efficient querying
+- **Data Processing** (`scripts/database_normalization_script.ts`)  
+  - **Run:**  
+    ```bash
+    pnpm run build-gold
+    # or
+    ts-node scripts/database_normalization_script.ts
+    ```  
+  - **What it does:**  
+    1. Reads Bronze JSON  
+    2. Normalizes schema into Silver  
+    3. Joins descriptions + salaries into Gold  
+    4. Generates a Fuse.js search index  
 
-### Query Parser (`lib/queryParser.ts`)
+> **Note:** You only need to re-run `database_normalization_script.ts` if the source JSON changes. The committed Gold files are treated as derived artifacts for daily development and CI. They are in the data folder
+
+
+
+- **Runtime Querying** (`src/lib/queryParser.ts`, `src/lib/jobSearch.ts`)  
+  - Consumes the Gold files for fast, in-memory lookups  
+  - No database or external server required  
 - Analyzes natural language queries using regex and string parsing
 - Identifies key components like:
   - Keywords for job roles
